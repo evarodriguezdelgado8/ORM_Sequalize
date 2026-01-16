@@ -41,7 +41,7 @@ Ejecuta el siguiente comando en la terminal para instalar las librerías necesar
 npm install
 ```
 
-## 2. Configuración de Base de Datos
+### 2. Configuración de Base de Datos
 
 - Asegúrate de tener una base de datos MySQL creada (por defecto: `api_rest_db`).
 - Verifica las credenciales en el archivo `config/db.js` (usuario, contraseña, host).
