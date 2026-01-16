@@ -109,7 +109,7 @@ Ejemplo de prueba en **Postman** para una tabla con la columna `log`.
 
 **URL:**
 ```
-http://localhost:3000/api/log18
+http://localhost:3000/api/log8
 ```
 
 **Body (JSON):**
@@ -125,6 +125,6 @@ http://localhost:3000/api/log18
 
 **URL:**
 ```
-http://localhost:3000/api/log18
+http://localhost:3000/api/log8
 ```
 
