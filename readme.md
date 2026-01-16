@@ -1,9 +1,3 @@
-Proceso para generar los modelos:
-Ejecutar en terminal:
-
-    npx sequelize-auto -h localhost -d api_rest_db -u root -p 3306 -x -e mysql -o "./models" -l esm
-
-
 # Práctica: Refactorización a MVC Reducida y AutoCRUD
 
 Este proyecto implementa una API REST con Node.js y Sequelize. Se ha refactorizado el sistema para generar automáticamente una estructura de **MVC Reducida** (Modelo-Vista-Controlador) escalable.
@@ -53,7 +47,7 @@ npm install
 Instrucciones para la prueba de clase (ejemplo: crear una nueva tabla y generar su API).
 
 ### Paso 1: Crear la tabla en Base de Datos
-1. Crear la tabla en **phpMyAdmin** (ej: `log18` o `ensayo`).
+1. Crear la tabla en **phpMyAdmin** (ej: `log8`).
 2. **Importante:** El campo `id` debe ser **Primary Key** y **Auto Increment (A_I)**.
 
 ### Paso 2: Generar el Modelo Sequelize
@@ -61,3 +55,46 @@ Ejecuta este comando para traer la nueva tabla al código:
 
 ```bash
 npx sequelize-auto -h localhost -d api_rest_db -u root -p 3306 -e mysql -o "./models" -l esm
+```
+
+### Paso 3: Generar la Arquitectura MVC
+
+Ejecuta el script de automatización:
+
+```bash
+node autocrud.js
+```
+
+Este comando creará automáticamente:
+- El servicio
+- El controlador base
+- El controlador
+- La ruta
+
+---
+
+### Paso 4: Registrar la Ruta
+
+Abre el archivo `server.js` y añade manualmente la nueva ruta.
+
+Importa la ruta en la parte superior del archivo:
+
+```javascript
+import nuevaTablaRoutes from "./routes/nuevaTablaRoutes.js";
+```
+
+Registra la ruta en la configuración del servidor:
+
+```javascript
+app.use("/api/nuevaTabla", nuevaTablaRoutes);
+```
+
+---
+
+### Paso 5: Iniciar el Servidor
+
+Inicia el servidor ejecutando el siguiente comando:
+
+```bash
+node server.js
+```
