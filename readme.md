@@ -98,3 +98,33 @@ Inicia el servidor ejecutando el siguiente comando:
 ```bash
 node server.js
 ```
+
+## 🧪 Prueba de Endpoints
+
+Ejemplo de prueba en **Postman** para una tabla con la columna `log`.
+
+---
+
+### Crear registro (POST)
+
+**URL:**
+```
+http://localhost:3000/api/log18
+```
+
+**Body (JSON):**
+```json
+{
+  "log": "Prueba de funcionamiento correcta"
+}
+```
+
+---
+
+### Listar registros (GET)
+
+**URL:**
+```
+http://localhost:3000/api/log18
+```
+
