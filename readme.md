@@ -35,7 +35,28 @@ El sistema AutoCRUD lee los modelos de la base de datos y genera automáticament
 
 Sigue estos pasos para poner en marcha el proyecto:
 
-### 1. Instalar dependencias
+### 1. Instalar dependencias 
 Ejecuta el siguiente comando en la terminal para instalar las librerías necesarias:
 ```bash
 npm install
+
+## 2. Configuración de Base de Datos
+
+- Asegúrate de tener una base de datos MySQL creada (por defecto: `api_rest_db`).
+- Verifica las credenciales en el archivo `config/db.js` (usuario, contraseña, host).
+
+---
+
+## ▶️ Guía de Ejecución del AutoCRUD (Paso a Paso)
+
+Instrucciones para la prueba de clase (ejemplo: crear una nueva tabla y generar su API).
+
+### Paso 1: Crear la tabla en Base de Datos
+1. Crear la tabla en **phpMyAdmin** (ej: `log18` o `ensayo`).
+2. **Importante:** El campo `id` debe ser **Primary Key** y **Auto Increment (A_I)**.
+
+### Paso 2: Generar el Modelo Sequelize
+Ejecuta este comando para traer la nueva tabla al código:
+
+```bash
+npx sequelize-auto -h localhost -d api_rest_db -u root -p 3306 -e mysql -o "./models" -l esm
