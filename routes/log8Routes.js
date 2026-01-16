@@ -1,6 +1,6 @@
-// routes/logRoutes.js
+// routes/log8Routes.js
 import express from "express";
-import { getAll, getById, create, update, remove } from "../controllers/logController.js";
+import { getAll, getById, create, update, remove } from "../controllers/log8Controller.js";
 
 const router = express.Router();
 

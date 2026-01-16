@@ -4,6 +4,7 @@ import _categorias from  "./categorias.js";
 import _clientes from  "./clientes.js";
 import _detalles_pedido from  "./detalles_pedido.js";
 import _log from  "./log.js";
+import _log8 from  "./log8.js";
 import _pedidos from  "./pedidos.js";
 import _productos from  "./productos.js";
 
@@ -12,6 +13,7 @@ export default function initModels(sequelize) {
   const clientes = _clientes.init(sequelize, DataTypes);
   const detalles_pedido = _detalles_pedido.init(sequelize, DataTypes);
   const log = _log.init(sequelize, DataTypes);
+  const log8 = _log8.init(sequelize, DataTypes);
   const pedidos = _pedidos.init(sequelize, DataTypes);
   const productos = _productos.init(sequelize, DataTypes);
 
@@ -27,6 +29,7 @@ export default function initModels(sequelize) {
     clientes,
     detalles_pedido,
     log,
+    log8,
     pedidos,
     productos,
   };

@@ -1,5 +1,5 @@
-// controllers/categoriasController.js
-import * as Base from "./base/categoriasBaseController.js";
+// controllers/log8Controller.js
+import * as Base from "./base/log8BaseController.js";
 
 // Exportamos las funciones del Base para usarlas en las rutas
 export const getAll = Base.getAll;
