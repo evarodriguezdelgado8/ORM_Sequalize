@@ -39,6 +39,7 @@ Sigue estos pasos para poner en marcha el proyecto:
 Ejecuta el siguiente comando en la terminal para instalar las librerías necesarias:
 ```bash
 npm install
+```
 
 ## 2. Configuración de Base de Datos
 
