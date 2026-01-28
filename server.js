@@ -6,6 +6,7 @@ import { sequelize } from "./config/db.js";
 import initModels from "./models/init-models.js";
 
 import log8Routes from "./routes/log8Routes.js";
+import Carlos46Routes from "./routes/Carlos46Routes.js";
 
 const app = express();
 app.use(express.json());
@@ -16,6 +17,7 @@ app.use("/api/productos", productoRoutes);
 app.use("/api/log", logRoutes);
 app.use("/api/clientes", clientesRoutes);
 app.use("/api/log8", log8Routes);
+app.use("/api/Carlos46", Carlos46Routes);
 
 // Sincronizar base de datos
 (async () => {
